@@ -1,0 +1,26 @@
+{
+  "name": "react-multi-pages",
+  "version": "1.0.0",
+  "description": "react+webpack配置多入口页面",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "webpack",
+    "multi",
+    "pages"
+  ],
+  "homepage": "https://github.com/fish7929/react-multi-pages.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fish7929/react-multi-pages.git"
+  },
+  "author": "fishYu",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  }
+}
