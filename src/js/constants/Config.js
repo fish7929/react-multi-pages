@@ -2,7 +2,7 @@
 export const CONFIG = {
   owner      : 'cobish',
   repo       : 'cobish.github.io',
-  title      : 'cobish - 写给未来的自己',
+  title      : 'fish - 写给未来的自己',
   titleLoad  : 'cobish - 正在加载...',
   duoshuo    : 'cobish',
   baiduAnaly : '84602bc3713ca2aeb0258c55adf6a333',

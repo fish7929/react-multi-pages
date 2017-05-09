@@ -9,23 +9,23 @@ var defaultIssuesState = {
 };
 
 // issues reducer
-function postIssues(defaultIssuesState, action) {
+function postIssues(state = defaultIssuesState, action) {
   switch (action.type) {
     case FETCH_ISSUES:
       // 获取issues
-      return objectAssign({}, defaultIssuesState, {
+      return objectAssign({}, state, {
         isFetching: true
       });
 
     case RECEIVE_ISSUES:
       // 接收issues
-      return objectAssign({}, defaultIssuesState, {
+      return objectAssign({}, state, {
         isFetching: false,
         items: action.posts
       });
 
     default:
-      return defaultIssuesState;
+      return state;
   }
 }
 
