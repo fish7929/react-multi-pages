@@ -59,7 +59,7 @@ function mapStateToProps(state) {
   const {
     isFetching,
     items
-  } = state || {
+  } = state.postIssues || {
     isFetching: true,
     items: []
   };

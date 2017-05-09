@@ -13,7 +13,7 @@ class All extends Component {
     if (this.props.isFetching) {
       return null;
     }
-
+    console.log(this.props);
     return (
       <div className="list">
         <CellView title="全部" items={this.props.items} />
@@ -26,7 +26,7 @@ function mapStateToProps(state) {
   const {
     isFetching,
     items
-  } = state || {
+  } = state.postIssues || {
     isFetching: true,
     items: []
   };

@@ -1,13 +1,14 @@
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import thunkMiddleware from 'redux-thunk';
-import rootReducer from '../reducers/index.js';
+import reducer from '../reducers';
 
 export default function configureStore(preloadedState) {
   return createStore(
-    rootReducer,
+    reducer,
     preloadedState,
-    applyMiddleware(
-      thunkMiddleware
+    compose(
+      applyMiddleware(thunkMiddleware),
+      window.devToolsExtension ? window.devToolsExtension() : f => f
     )
   );
 };

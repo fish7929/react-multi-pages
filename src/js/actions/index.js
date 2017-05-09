@@ -45,8 +45,8 @@ function shouldFetchIssues(state) {
   if (!state) {
     return true;
   }
-
-  return !state.items.length;
+  console.log(state, 678);
+  return !state.postIssues.items.length;   
 }
 
 // 按需获取issues
