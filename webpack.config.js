@@ -71,7 +71,7 @@ module.exports = {
     }, {
       test: /\.js$/,
       exclude: /node_modules/,
-      loaders: ['react-hot-loader', 'babel-loader?presets[]=react,presets[]=es2015']
+      loaders: ['babel-loader']
     }]
   },
   plugins: getPlugins()
@@ -115,7 +115,7 @@ function getPlugins() {
       filename : isProd() ? './js/vendor.[chunkhash:8].js' : './js/vendor.js'
     }),
     new ExtractTextPlugin(isProd() ? './css/[name].[chunkhash:8].css' : './css/[name].css'),
-    new webpack.NoErrorsPlugin()
+    new webpack.NoEmitOnErrorsPlugin()
   ];
 
   if (isDev()) {
