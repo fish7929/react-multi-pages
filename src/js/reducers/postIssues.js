@@ -1,6 +1,6 @@
 // import { combineReducers } from 'redux';
 import objectAssign from 'object-assign';
-import { FETCH_ISSUES, RECEIVE_ISSUES } from '../constants/ActionTypes.js';
+import { REQUEST_ISSUES, RECEIVE_ISSUES } from '../constants/ActionTypes.js';
 import { fetchIssues, receiveIssues } from '../actions/index.js';
 
 var initialState = {
@@ -11,7 +11,7 @@ var initialState = {
 // issues reducer
 function postIssues(state = initialState, action) {
   switch (action.type) {
-    case FETCH_ISSUES:
+    case REQUEST_ISSUES:
       // 获取issues
       return objectAssign({}, state, {
         isFetching: true
